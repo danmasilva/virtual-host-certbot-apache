@@ -15,10 +15,10 @@ Caso não queira usar parâmetros, basta rodar o comando
 ./script-config-host.sh
 ```
 
-E seguir as instruções.
-Primeiro: indicar url do domínio. É importante que o domínio seja escrito sem www, para que a criação do host seja feita corretamente.
-Segundo: indicar se url possui alias 'www'. Caso positivo, digite 1, caso contrário 2.
-Terceiro: Confirmar as informações. Os dados coletados são impressos na tela. Se estiverem corretos, digite 1 para começar a criação do script, ou 2 para sair.
+E seguir as instruções:
+- Indicar url do domínio. É importante que o domínio seja escrito sem www, para que a criação do host seja feita corretamente.
+- Indicar se url possui alias 'www'. Caso positivo, digite 1, caso contrário 2.
+- Confirmar as informações. Os dados coletados são impressos na tela. Se estiverem corretos, digite 1 para começar a criação do script, ou 2 para sair.
 
 ### Funcionamento:
 
