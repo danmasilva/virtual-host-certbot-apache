@@ -1,6 +1,6 @@
 # virtual-host-certbot-apache
 
-Script criado para criar e configurar um novo virtualHost num servidor funcionando com apache2, após é feita a configuração do certificado utilizando certbot/letsencript.
+Script criado para criar e configurar um novo virtualHost num servidor funcionando com apache2, após é feita a configuração do certificado utilizando certbot/letsencript.  
 https://github.com/danmasilva/virtual-host-certbot-apache
 
 ## Utilização básica
@@ -9,8 +9,8 @@ A utilização básica do script é:
 ```
 ./script-config-host.sh example.com 1
 ```
-Onde o primeiro parâmetro indica o domínio e o segundo indica se esse domínio possui como alias www.example.com (1-SIM, 2-NÃO).
-**O domínio deve ser escrito sem www, a não ser que o único host seja www.example.com.**
+Onde o primeiro parâmetro indica o domínio e o segundo indica se esse domínio possui como alias www.example.com (1-SIM, 2-NÃO).  
+**O domínio deve ser escrito sem www, a não ser que o único host seja www.example.com.**  
 Caso não queira usar parâmetros, basta rodar o comando
 ```
 ./script-config-host.sh
