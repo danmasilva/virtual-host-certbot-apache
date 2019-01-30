@@ -21,15 +21,6 @@ else
   ISPOSSUIWWW='2'
 fi
 
-echo 'Domínio: '$DOMINIO'.'
-if [[ ISPOSSUIWWW -eq '1' ]]; then
-  echo 'O domínio possui www.'
-else
-  echo 'O domínio não possui www.'
-fi
-echo 'Confirma? (1-SIM, 2-NÃO)'
-read CONFIRMACAO
-if [[ CONFIRMACAO -eq '1' ]]; then
   sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/$DOMINIO.conf
   sudo sed -i 's/example1.com.br/'$DOMINIO'/g' /etc/apache2/sites-available/$DOMINIO.conf
   if [[ ISPOSSUIWWW -eq '1' ]]; then
@@ -43,5 +34,4 @@ if [[ CONFIRMACAO -eq '1' ]]; then
     sudo ln -s /etc/apache2/sites-available/$DOMINIO.conf /etc/apache2/sites-enabled/$DOMINIO.conf
     sudo certbot --apache -d $DOMINIO
   fi
-fi
 
