@@ -27,11 +27,13 @@ fi
     #Server alias será www/domínio e certificado será criado
     sudo sed -i 's/www.example1.com.br/www.'$DOMINIO'/g' /etc/apache2/sites-available/$DOMINIO.conf
     sudo ln -s /etc/apache2/sites-available/$DOMINIO.conf /etc/apache2/sites-enabled/$DOMINIO.conf
-    sudo certbot --apache -d $DOMINIO -d www.$DOMINIO
+    sudo certbot --apache --redirect -d $DOMINIO -d www.$DOMINIO
+    exit 20
   else
     #Não haverá server alias e certificado será criado
     sudo sed -i '/www.example1.com.br/d' /etc/apache2/sites-available/$DOMINIO.conf
     sudo ln -s /etc/apache2/sites-available/$DOMINIO.conf /etc/apache2/sites-enabled/$DOMINIO.conf
-    sudo certbot --apache -d $DOMINIO
+    sudo certbot --apache --redirect -d $DOMINIO
+    exit 20
   fi
 
