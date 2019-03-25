@@ -37,3 +37,4 @@ fi
     exit 20
   fi
 
+sed -i 's/Include \/etc\/apache2\/domains-commons.conf/Include \/etc\/apache2\/ssl-domains-commons.conf/g' $DOMINIO-le-ssl.conf
